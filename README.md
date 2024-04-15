@@ -1,16 +1,7 @@
-# weight_log
+记录体重的app, 记录 **体重数据** 和 **变化趋势**
 
-A new Flutter project.
+目前只有android, 以后可能会有ios [狗头]
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+|||
+|--|--|
+| <img src="https://github.com/ningbowang/weight_log/assets/47706456/942c497e-3001-4cf3-8c06-0a4badda7edb"> | <img src="https://github.com/ningbowang/weight_log/assets/47706456/610298a6-f1db-4242-b14f-6933762bd6b3"> |
