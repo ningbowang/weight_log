@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:weight_log/widget/weight_record_text_field_del.dart';
 import 'package:weight_log/widget/weight_record_text_field_update.dart';
 
@@ -124,7 +123,7 @@ class WeightRecordCell extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(16, 2, 0, 2),
                         child: Text(
-                          '${weightRecord.weight} KG',
+                          '${weightRecord.weight.toStringAsFixed(2)} kg',
                           style: const TextStyle(fontSize: 13),
                         ),
                       )),
