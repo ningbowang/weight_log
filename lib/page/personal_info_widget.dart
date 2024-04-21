@@ -23,7 +23,7 @@ class PersonalInfo extends StatefulWidget {
 class _PersonalInfoState extends State<PersonalInfo> {
   final _scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
   final _dialogTitleController = TextEditingController();
-  final _initialDirectoryController = TextEditingController();
+  final _initialDirectoryController = TextEditingController(text: '/storage/emulated/0/Documents');
   bool _isLoading = false;
   String? _directoryPath;
   String? _fileName;
@@ -46,6 +46,18 @@ class _PersonalInfoState extends State<PersonalInfo> {
                 const SizedBox(
                   height: 20.0,
                 ),
+                // Container(
+                //   margin: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+                //   padding: const EdgeInsets.fromLTRB(4, 10, 4, 10),
+                //   decoration: BoxDecoration(
+                //       borderRadius: BorderRadius.circular(3),///圆角
+                //       border: Border.all(color: const Color(0xFF010102),width: 0.6)///边框颜色、宽
+                //   ),
+                //   child: const Text(
+                //     '导出时选择 Document、Download、Music、Pictures等公共文件夹, 如果失败尝试在以上文件夹中新建文件夹再导出',
+                //     style: TextStyle(fontSize: 14,  color: Color(0xFF434548)),
+                //   ),
+                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

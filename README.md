@@ -1,7 +1,8 @@
-记录体重的app, 记录 **体重数据** 和 **变化趋势**
+记录体重的app
+数据可导出为csv文件. 导出时尽量选择公共文件夹: Document、Download、Music、Movies等公共文件夹.
 
-目前只有android, 以后可能会有ios [狗头]
+若导出失败, 则在上述文件夹中新建文件夹，重新导出到新建的文件夹中.
 
-|||
-|--|--|
-| <img src="https://github.com/ningbowang/weight_log/assets/47706456/942c497e-3001-4cf3-8c06-0a4badda7edb"> | <img src="https://github.com/ningbowang/weight_log/assets/47706456/610298a6-f1db-4242-b14f-6933762bd6b3"> |
+|           记录           |           趋势           |           我的           |
+|:----------------------:|:----------------------:|:----------------------:|
+| ![](./docs/pics/1.png) | ![](./docs/pics/2.png) | ![](./docs/pics/3.png) |
