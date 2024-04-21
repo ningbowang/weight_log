@@ -22,7 +22,6 @@ class _NavigationState extends State<Layout> {
   Widget build(BuildContext context) {
     WeightLogDatabase db = widget.db;
 
-    final ThemeData theme = Theme.of(context);
     return Scaffold(
       // backgroundColor: Colors.red,
       bottomNavigationBar: NavigationBar(
@@ -44,10 +43,10 @@ class _NavigationState extends State<Layout> {
             icon: Icon(Icons.auto_graph_rounded),
             label: '趋势',
           ),
-          // NavigationDestination(
-          //   icon: Icon(Icons.person),
-          //   label: '个人数据',
-          // ),
+          NavigationDestination(
+            icon: Icon(Icons.person),
+            label: '我的',
+          ),
         ],
       ),
       body: <Widget>[
@@ -70,10 +69,10 @@ class _NavigationState extends State<Layout> {
         ),
 
 
-        // todo 用户信息 page
-        // Card(
-        //   child: PersonalInfo(db: db,),
-        // )
+        /// 用户信息 page
+        Card(
+          child: PersonalInfo(db: db,),
+        )
       ][currentPageIndex],
     );
   }

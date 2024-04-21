@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weight_log/constant/db.dart';
 import 'package:weight_log/page/layout.dart';
 
 import 'db/database.dart';
@@ -6,7 +7,7 @@ import 'db/database.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final db = await $FloorWeightLogDatabase
-      .databaseBuilder('weight_log_database.db')
+      .databaseBuilder(dbName)
       .build();
 
   runApp(WeightLogApp(db));
