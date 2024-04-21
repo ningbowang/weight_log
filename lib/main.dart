@@ -6,9 +6,7 @@ import 'db/database.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final db = await $FloorWeightLogDatabase
-      .databaseBuilder(dbName)
-      .build();
+  final db = await $FloorWeightLogDatabase.databaseBuilder(dbName).build();
 
   runApp(WeightLogApp(db));
 }
@@ -23,6 +21,8 @@ class WeightLogApp extends StatelessWidget {
     const String title = '体重记录';
     return MaterialApp(
       // debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       title: title,
       // // theme: ThemeData(primarySwatch: Colors.blueGrey),

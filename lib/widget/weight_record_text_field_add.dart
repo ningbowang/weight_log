@@ -15,43 +15,43 @@ class WeightRecordTextFieldAdd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // color: Colors.black12,
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: TextField(
-              controller: _textEditingController,
-              keyboardType: TextInputType.number,
-              //设置键盘为数字
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'[0-9\\.]'))
-                //设置只允许输入数字
-              ],
-              decoration: const InputDecoration(
-                fillColor: Colors.transparent,
-                filled: true,
-                contentPadding: EdgeInsets.all(16),
-                border: InputBorder.none,
-                hintText: '请输入体重: ',
-              ),
-              onSubmitted: (_) async {
-                await _persistMessage();
-              },
+    return Row(
+      children: <Widget>[
+        Expanded(
+          child: TextField(
+            controller: _textEditingController,
+            keyboardType: TextInputType.number,
+            //设置键盘为数字
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(RegExp(r'[0-9\\.]'))
+              //设置只允许输入数字
+            ],
+            decoration: const InputDecoration(
+              fillColor: Colors.transparent,
+              filled: true,
+              contentPadding: EdgeInsets.all(16),
+              border: InputBorder.none,
+              hintText: '请输入体重: ',
             ),
+            onSubmitted: (_) async {
+              await _persistMessage();
+            },
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: OutlinedButton(
-              child: const Text('保存'),
-              onPressed: () async {
-                await _persistMessage();
-                FocusScope.of(context).requestFocus(FocusNode()); //保存后自动收起键盘
-              },
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 16),
+          child: OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              side: const BorderSide(width: 1.0, color: Color(0xFFced0d6)),
             ),
+            child: const Text('保存'),
+            onPressed: () async {
+              await _persistMessage();
+              FocusScope.of(context).requestFocus(FocusNode()); //保存后自动收起键盘
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

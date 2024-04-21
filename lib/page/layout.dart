@@ -26,6 +26,7 @@ class _NavigationState extends State<Layout> {
       // backgroundColor: Colors.red,
       bottomNavigationBar: NavigationBar(
         height: 70,
+        // backgroundColor: Colors.white,
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
@@ -52,25 +53,15 @@ class _NavigationState extends State<Layout> {
       body: <Widget>[
         /// 记录 page
         Card(
-          child: Center(
-              child: WeightRecordsWidget(db: db)
-          ),
+            child: WeightRecordsWidget(db: db)
         ),
         /// 趋势 page
         Card(
-          shadowColor: Colors.transparent,
-          margin: const EdgeInsets.all(8.0),
-          child: SizedBox.expand(
-            child: Center(
-                child: WeightTrendsWidget(db: db),
-                // child: WeightTrendsWidgetCopy(db: db),
-            ),
-          ),
+          child: WeightTrendsWidget(db: db)
         ),
-
-
         /// 用户信息 page
         Card(
+          // color: Colors.white,
           child: PersonalInfo(db: db,),
         )
       ][currentPageIndex],

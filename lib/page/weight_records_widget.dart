@@ -23,22 +23,18 @@ class WeightRecordsWidgetState extends State<WeightRecordsWidget> {
   @override
   Widget build(BuildContext context) {
     WeightRecordDao weightRecordDao = widget.db.weightRecordDao;
-    return Container(
-      padding: EdgeInsets.all(0),
-      margin: EdgeInsets.all(0),
-      child: Scaffold(
-        // appBar: AppBar(
-        //   // title: const Text('体重记录'),
-        //   centerTitle: true,
-        // ),
+    return Scaffold(
+      // appBar: AppBar(
+      //   // title: const Text('体重记录'),
+      //   centerTitle: true,
+      // ),
 
-        body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              WeightRecordListView(dao: weightRecordDao), //体重列表
-              WeightRecordTextFieldAdd(dao: weightRecordDao) //体重输入框
-            ],
-          ),
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            WeightRecordListView(dao: weightRecordDao), //体重列表
+            WeightRecordTextFieldAdd(dao: weightRecordDao) //体重输入框
+          ],
         ),
       ),
     );
@@ -83,13 +79,13 @@ class WeightRecordCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(0, 1, 0, 1),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: const Color(0xFFd5dced), // 边框颜色
-          width: 0.5, // 边框宽度
-        ),
+      decoration: const BoxDecoration(
+        border: Border(
+            bottom: BorderSide(
+                color: Color(0xFFd5dced), // 边框颜色
+                width: 0.5, // 边框宽度
+            )
+        )
       ),
       child: Row(
         children: [
@@ -98,7 +94,6 @@ class WeightRecordCell extends StatelessWidget {
                 onTap: () => showDialog<String>(
                   context: context,
                   builder: (BuildContext context) => Dialog(
-                    // backgroundColor: Colors.white,
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -124,7 +119,7 @@ class WeightRecordCell extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(16, 2, 0, 2),
                         child: Text(
                           '${weightRecord.weight.toStringAsFixed(2)} kg',
-                          style: const TextStyle(fontSize: 13),
+                          style: const TextStyle(fontSize: 14),
                         ),
                       )),
             )),

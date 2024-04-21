@@ -136,7 +136,7 @@ class DatetimePickerState extends State<DatetimePicker> {
       },
       child: Text(DateFormat('yyyy-MM-dd HH:mm:ss')
           .format(widget.weightRecord.createTimestamp),
-          style: const TextStyle(fontSize: 13)
+          style: const TextStyle(fontSize: 14)
       ),
     );
   }
